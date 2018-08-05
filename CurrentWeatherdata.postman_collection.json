@@ -1,0 +1,312 @@
+{
+	"id": "cfdde1c8-a2d2-4f5f-b4e9-4477a2f7b0d2",
+	"name": "CurrentWeatherdata",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": null,
+	"order": [
+		"2eb50d67-de3a-464c-8fdc-ac6c1befdbe4",
+		"3a080b8e-b07c-46ea-b10b-a7d5f3ab6cf6",
+		"74900be9-a1c3-4438-8562-0c86f0abdf45",
+		"0159c45a-3ccb-4b82-91b5-188fa194c517",
+		"53979d0c-ce9d-496d-963c-8eb2969bfc29",
+		"4bc3f9a5-69e8-4abb-a916-b6e095a86c1d",
+		"287177b3-d1e0-4095-ba47-38299af38917",
+		"cd157434-07e1-4ed5-bd8f-5dae9188e71b",
+		"4eb6298d-a6f1-45e3-ad3c-61b42ba538c2"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "0159c45a-3ccb-4b82-91b5-188fa194c517",
+			"name": "Check ID city",
+			"url": "",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "287177b3-d1e0-4095-ba47-38299af38917",
+			"name": "Check geographic coordinates (Cities in cycle)",
+			"url": "http://api.openweathermap.org/data/2.5/find?lat=55.5&lon=37.5&cnt=10&APPID=c6323da162802fa8dd31f136c83b580e",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "lat",
+					"value": "55.5",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "lon",
+					"value": "37.5",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "cnt",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "APPID",
+					"value": "c6323da162802fa8dd31f136c83b580e",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "2eb50d67-de3a-464c-8fdc-ac6c1befdbe4",
+			"name": "Check weather",
+			"url": "api.openweathermap.org/data/2.5/weather?q=London&APPID=c6323da162802fa8dd31f136c83b580e",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "q",
+					"value": "0ae803d573350f85ba40b7ad5318b764",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "q",
+					"value": "London",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "APPID",
+					"value": "c6323da162802fa8dd31f136c83b580e",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3e329a17-7482-4e53-92a7-d4d366e7325d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"folder": null,
+			"headers": "q: 0ae803d573350f85ba40b7ad5318b764\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "3a080b8e-b07c-46ea-b10b-a7d5f3ab6cf6",
+			"name": "Check Name city",
+			"url": "",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "4bc3f9a5-69e8-4abb-a916-b6e095a86c1d",
+			"name": "Check  geographic coordinates (rectangle zone)",
+			"url": "http://api.openweathermap.org/data/2.5/box/city?bbox=12,32,15,37,10&APPID=c6323da162802fa8dd31f136c83b580e",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "bbox",
+					"value": "12,32,15,37,10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "APPID",
+					"value": "c6323da162802fa8dd31f136c83b580e",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "4eb6298d-a6f1-45e3-ad3c-61b42ba538c2",
+			"name": "Check ID city (с минусовым значением)",
+			"url": "api.openweathermap.org/data/2.5/weather?id=-2172797&APPID=c6323da162802fa8dd31f136c83b580e",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "-2172797",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "APPID",
+					"value": "c6323da162802fa8dd31f136c83b580e",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "53979d0c-ce9d-496d-963c-8eb2969bfc29",
+			"name": "Check geographic coordinates (lat, lon)",
+			"url": "api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=c6323da162802fa8dd31f136c83b580e",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "lat",
+					"value": "35",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "lon",
+					"value": "139",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "APPID",
+					"value": "c6323da162802fa8dd31f136c83b580e",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "74900be9-a1c3-4438-8562-0c86f0abdf45",
+			"name": "Check ID country",
+			"url": "",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "cd157434-07e1-4ed5-bd8f-5dae9188e71b",
+			"name": "Check call for several city IDs",
+			"url": "http://api.openweathermap.org/data/2.5/group?id=524901,703448,2643743&units=metric&APPID=c6323da162802fa8dd31f136c83b580e",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "524901,703448,2643743",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "units",
+					"value": "metric",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "APPID",
+					"value": "c6323da162802fa8dd31f136c83b580e",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
